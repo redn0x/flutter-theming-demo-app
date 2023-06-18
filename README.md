@@ -1,5 +1,5 @@
 # demo_theming
-
+- Inherited Widget
 	- Create inherited widget
 	- Create ThemeData class
 	- Create Colors 

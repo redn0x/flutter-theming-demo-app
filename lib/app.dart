@@ -14,8 +14,6 @@ class _DemoAppState extends State<DemoApp> {
 
   @override
   Widget build(BuildContext context) {
-    // final theme = darkThemeOn ? DarkTheme() : LightTheme();
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: darkThemeOn ? ThemeData.dark() : ThemeData.light(),

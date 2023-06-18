@@ -1,5 +1,44 @@
-class TextStyles {
-  // TextStyles(this.theme);
+class TextStyles {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// TextStyles(this.theme);
 
   // final AppThemeData theme;
 
@@ -14,4 +53,3 @@ class TextStyles {
   // late final subTitle2 = TextStyle(
   //   fontSize: theme.fontSizes.subTitle2,
   // );
-}

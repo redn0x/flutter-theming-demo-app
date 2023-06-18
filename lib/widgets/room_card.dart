@@ -1,4 +1,3 @@
-import 'package:demo_theming/styling/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class RoomCard extends StatelessWidget {
@@ -19,13 +18,13 @@ class RoomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = AppTheme.of(context);
+    // final theme = AppTheme.of(context);
 
     return Card(
       borderOnForeground: true,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(
-          theme.spacings.medium,
+          8,
         ),
       ),
       clipBehavior: Clip.antiAlias,
@@ -33,7 +32,7 @@ class RoomCard extends StatelessWidget {
         children: [
           Container(
             height: 120,
-            margin: EdgeInsets.only(bottom: theme.spacings.medium),
+            margin: const EdgeInsets.only(bottom: 8),
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(image),
@@ -44,8 +43,8 @@ class RoomCard extends StatelessWidget {
           icon,
           Text(name),
           Padding(
-            padding: EdgeInsets.all(
-              theme.spacings.medium,
+            padding: const EdgeInsets.all(
+              8,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'package:demo_theming/styling/app_theme.dart';
 import 'package:demo_theming/widgets/device_card.dart';
 import 'package:demo_theming/widgets/info_card.dart';
 import 'package:demo_theming/widgets/room_card.dart';
@@ -11,13 +10,13 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = AppTheme.of(context);
+    // final theme = AppTheme.of(context);
     final materialTheme = Theme.of(context);
     return SingleChildScrollView(
       child: Column(
         children: [
           Padding(
-            padding: EdgeInsets.all(theme.spacings.medium),
+            padding: const EdgeInsets.all(8),
             child: Text(
               'Welcome home',
               style: materialTheme.textTheme.titleLarge,
@@ -25,7 +24,7 @@ class HomePage extends StatelessWidget {
           ),
           const InfoCards(),
           Padding(
-            padding: EdgeInsets.all(theme.spacings.medium),
+            padding: const EdgeInsets.all(8),
             child: Text(
               'Recent devices',
               style: materialTheme.textTheme.titleLarge,
@@ -33,7 +32,7 @@ class HomePage extends StatelessWidget {
           ),
           const DeviceCards(),
           Padding(
-            padding: EdgeInsets.all(theme.spacings.medium),
+            padding: const EdgeInsets.all(8),
             child: Text(
               'Rooms',
               style: materialTheme.textTheme.titleLarge,
@@ -77,7 +76,7 @@ class InfoCards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = AppTheme.of(context);
+    // final theme = AppTheme.of(context);
 
     return Row(
       children: [
@@ -87,7 +86,7 @@ class InfoCards extends StatelessWidget {
             icon: const Icon(FontAwesomeIcons.cloudSun),
             mainText: '27°C',
             subText: 'Utrecht',
-            color: theme.infoCard.color1,
+            color: Colors.blue[500],
           ),
         ),
         Expanded(
@@ -96,7 +95,7 @@ class InfoCards extends StatelessWidget {
             icon: const Icon(FontAwesomeIcons.lightbulb),
             mainText: '15',
             subText: 'Active devices',
-            color: theme.infoCard.color2,
+            color: Colors.orange[500],
           ),
         ),
         Expanded(
@@ -105,7 +104,7 @@ class InfoCards extends StatelessWidget {
             icon: const Icon(FontAwesomeIcons.bolt),
             mainText: '312​Kwh',
             subText: 'Usage',
-            color: theme.infoCard.color3,
+            color: Colors.green[500],
           ),
         )
       ],

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:demo_theming/styling/app_theme.dart';
-
 class InfoCard extends StatelessWidget {
   final VoidCallback? onPressed;
   final Icon icon;
@@ -21,7 +19,7 @@ class InfoCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = AppTheme.of(context);
+    // final theme = AppTheme.of(context);
 
     return Card(
       child: Container(
@@ -29,18 +27,20 @@ class InfoCard extends StatelessWidget {
           color: color,
         ),
         clipBehavior: Clip.antiAlias,
-        height: theme.infoCard.height,
-        padding: EdgeInsets.all(theme.spacings.medium),
+        height: 150,
+        padding: const EdgeInsets.all(4),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             icon,
-            SizedBox(
-              height: theme.spacings.small,
+            const SizedBox(
+              height: 4,
             ),
             Text(
               mainText,
-              style: theme.infoCard.textStyle,
+              style: const TextStyle(
+                fontSize: 25,
+              ),
               textAlign: TextAlign.center,
             ),
             Text(

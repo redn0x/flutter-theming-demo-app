@@ -1,4 +1,10 @@
-class TextStyles {}
+import 'package:flutter/material.dart';
+
+class TextStyles {
+  final TextStyle cardTitle = const TextStyle(
+    fontSize: 25,
+  );
+}
 
 
 
